@@ -1,0 +1,285 @@
+/* ALGEMENE STYLING */
+
+* {
+    margin: 0 0;
+    padding: 0 0;
+    font-family: quicksand;
+    position: relative;
+    overflow: hidden
+}
+
+:root {
+    --rood: #EF8677;
+    --vaagrood: #f0bbb4;
+    --groen: #A0E77D;
+    --vaaggroen: #c9e8ba;
+    --blauw: #82B6D9;
+    --vaagblauw: #a8d3f0;
+}
+
+@font-face {
+    font-family: quicksand;
+    src: url('./fonts/quicksand-variablefont_wght-webfont.woff') format('woff');
+}
+
+h1 {
+    font-size: 3em;
+    color: black;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: black;
+}
+
+p {
+    font-size: 2em;
+    color: black;
+}
+
+
+/* Titel styling */
+
+.titlewrapper {
+    position: relative;
+    width: 25vw;
+    min-width: 350px;
+    height: 30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3vw;
+    transition: ease 0.2s;
+}
+
+.title2 {
+    position: relative;
+    width: 25vw;
+    min-width: 100px;
+    height: 30vh;
+    left: 2.5vw;
+    margin-top: 3vw;
+    transition: ease 0.5s;
+}
+
+.titlewrapper:hover {
+    cursor: pointer;
+}
+
+.logo {
+    max-width:100%;
+    max-height:100%;
+}
+
+/* Main content styling */
+
+.containermain {  
+    position: relative;
+    width: 30vw;
+    min-width: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3em;
+    grid-auto-flow: row;    
+    margin-top: 10vh;
+    align-items: center;
+  }
+
+  /* Over mij knop */
+  
+.aboutme {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--vaaggroen);
+    transition: ease 0.5s;
+}
+
+.aboutme p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 1px solid var(--vaaggroen);
+    transition: ease 0.3s;
+}
+
+.aboutme:hover {
+    background-color: var(--groen);
+    cursor: pointer;
+}
+
+.aboutme:hover p {
+    border-bottom: 1px solid black;
+}
+
+  /* Mijn werk knop */
+
+.projects {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--vaagrood);
+    transition: ease 0.5s;
+}
+
+.projects p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 1px solid var(--vaagrood);
+    transition: ease 0.3s;
+}
+
+.projects:hover {
+    background-color: var(--rood);
+    cursor: pointer;
+}
+
+.projects:hover p {
+    border-bottom: 1px solid black;
+}
+
+/* Over mij styling  */
+
+.abouthide {
+    position: absolute;
+    background-color: var(--groen);
+    width: 100vw;
+    height: 62%;
+    top: 38%;
+    left: -100%;
+    transition: ease 0.1s;
+}
+
+.abouthide section {
+    position: relative;
+    width: 30%;
+    left: 35%;
+    height: 90%;
+    top: 10%;
+}
+
+.aboutshow {
+    position: absolute;
+    background-color: var(--groen);
+    width: 100vw;
+    height: 62%;
+    top: 38%;
+    left: 0%;
+    transition: ease 0.5s;
+}
+
+.aboutshow section {
+    position: relative;
+    width: 30%;
+    left: 35%;
+    height: 90%;
+    top: 10%;
+}
+
+
+.aboutx {
+    position: absolute;
+    width: 2%;
+    min-width: 40px;
+    top: 1%;
+    right: 35%;
+    padding: 1em;
+    transition: ease 0.5s;
+    z-index: 0;
+}
+
+.aboutx:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Projects grid styling */
+
+.projectshide {
+    position: absolute;
+    height: 100vh;
+    width: 70vw;
+    right: -100%;
+    top: 0%;
+    background-color: var(--rood);
+    transition: ease 0.1s;
+}
+
+.projectsshow {
+    position: absolute;
+    height: 100vh;
+    width: 70vw;
+    right: -2%;
+    top: 0%;
+    background-color: var(--rood);
+    transition: ease 0.5s;
+}
+
+.xprojects {
+    position: absolute;
+    width: 2%;
+    min-width: 40px;
+    top: 0%;
+    left: 0%;
+    padding: 1em;
+    transition: ease 0.5s;
+}
+
+.xprojects:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.containerprojects {  
+    position: relative;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  .containerprojects section {
+    background-color: var(--vaagblauw);
+    color: white;
+    padding: 1rem;
+    height: auto;
+    min-height: 350px;
+    transition: ease 0.5s;
+  }
+
+  .containerprojects section:hover {
+    background-color: var(--blauw);
+
+  }
+
+  .containerprojects section p {
+      left: 5%;
+      margin-bottom: 0.5em;
+  }
+
+  .containerprojects section h2 {
+    left: 5%;
+    margin-bottom: 0.5em;
+}
+
+  .containerprojects section div {
+      position: relative;
+      width: 90%;
+      height: 70%;
+      left: 5%;
+  }
+
+  .containerprojects section div img {
+      max-width:100%;
+      max-height:100%;
+  }
